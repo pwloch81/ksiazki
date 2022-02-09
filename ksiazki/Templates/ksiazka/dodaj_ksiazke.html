@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>dodawanie książek</title>
+</head>
+<body>
+    <h1> Tu możesz dodać książkę do bazy danych...</h1>
+    <form method = 'POST'> {% csrf_token %}
+        {{ form.as_p }}
+    <input type="submit" value ="Save" />
+    </form>
+<h3>
+    <a class="btn btn-default btn-lg" href="index" role="button">widok bazy danych...
+    </a></h3>
+</body>
+</html>

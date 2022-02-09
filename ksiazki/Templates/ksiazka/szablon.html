@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>pawel wloch</title>
+    <style>
+        table, th, td {border: 1px solid black;}
+
+    </style>
+</head>
+
+<body>
+<h1>Zestwienie książek zgodnie z instrukcją:</h1>
+
+
+ <div class="topnav">
+     </br></br>
+  <form action="" method="GET" class="d-flex">
+    <input class ="form-control me-2" type="search" name="a" placeholder="tytuł.." aria-label="tytuł">
+    <button type="submit">Szukaj</button>
+  </form>
+     </br></br>
+  <form action="" method="GET" class="d-flex">
+    <input class ="form-control me-2" type="search" name="b" placeholder="autor.." aria-label="autor">
+    <button type="submit">Szukaj</button>
+  </form>
+     </br></br>
+  <form action="" method="GET" class="d-flex">
+    <input class ="form-control me-2" type="search" name="c" placeholder="język.." aria-label="język">
+    <button class="btn btn-outline-success" type="submit">Szukaj</button>
+  </form>
+     </br></br>
+  <form action="" method="GET" class="d-flex">
+    <input class ="form-control me-2" type="search" name="d" placeholder="data od.." aria-label="data od..">
+    <input class ="form-control me-2" type="search" name="e" placeholder="data do.." aria-label="data do..">
+    <button class="btn btn-outline-success" type="submit">Szukaj</button>
+  </form>
+</br></br>
+ </div>
+
+<table style="width:70%">
+    <tr>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th>ISBN</th>
+        <th>Strony</th>
+        <th>język</th>
+        <th>link</th>
+
+    </tr>
+    {% for kat in ksiazka %}
+    <tr>
+
+        <p> <td><a " ksiazka/{{ kat.id}}    "> {{kat.tytuł}}</a></td>
+        <td><a "ksiazka/{{kat.id}}     "> {{kat.autor}} </a></td>
+        <td><a "ksiazka/{{kat.id}}     "> {{kat.ISBN}} </a></td>
+        <td><a "ksiazka/{{kat.id}}     "> {{kat.strony}} </a></td>
+        <td><a "ksiazka/{{kat.id}}     "> {{kat.jezyk}} </a></td>
+        <td><a "ksiazka/{{kat.id}}     "> {{kat.data}} </a></td>
+        <td><a href="ksiazka/{{kat.id}}     "> {{kat.link}} </a></td>
+        </p>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
